@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { useAuthState } from 'react-firebase-hooks/auth';
+import { useAuthState, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import "../styles/Login.css"
 import auth from '../../firebase.init';
 
 const Login = () => {
-    const [user, loading, userError] = useAuthState(auth)
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        HookError,
+      ] = useSignInWithEmailAndPassword(auth);
     let navigate = useNavigate();
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
@@ -13,8 +18,15 @@ const Login = () => {
     const [error, setError] = useState({ email: '', password: '' })
     const handleEmail = (event) => {
         event.preventDefault()
-        const formail = event.target.email.value
-        console.log(formail);
+        const Email = event.target.email.value
+        const password = event.target.password.value
+        signInWithEmailAndPassword(Email,password)
+    }
+    if (loading) {
+          <p>Loading</p>
+      }
+    if(user){
+        navigate(from)
     }
 
 
@@ -22,8 +34,8 @@ const Login = () => {
         <div className="login-container">
             <div className="login-title">LOGIN</div>
             <form onSubmit={handleEmail} className="login-form">
-                <input type="email" name='email' onBlur={(event) => handleEmail(event.target.value)} placeholder="Your Email" />
-                <input type="password" name='password' placeholder="password" onChange={handleEmail} />
+                <input type="email" name='email'  placeholder="Your Email" />
+                <input type="password" name='password' placeholder="password" />
                 <button>Login</button>
                 <p>Don't have an account? <Link to="/signup">Sign up first</Link> </p>
             </form>

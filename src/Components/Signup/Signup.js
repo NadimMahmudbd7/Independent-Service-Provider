@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useUpdateProfile } from 'react-firebase-hooks/auth';
 import { toast, ToastContainer } from 'react-toastify';
@@ -9,7 +9,8 @@ import auth from '../../firebase.init';
 
 
 const Signup = () => {
-    const [userInfo,setUserInfo] = useState({name:'',email:'',password:'',confirmpass:''})
+    const navigate = useNavigate()
+    const [userInfo,setUserInfo] = useState({email:'',password:'',confirmpass:''})
     const [error,setError] = useState({email:'',password:''})
     
     const [
@@ -33,20 +34,15 @@ const Signup = () => {
             return
         }
     }
-    console.log(user);
     const handleEmail = async (event) => {
         event.preventDefault()
-        const name = event.target.name.value
         const email = event.target.email.value
         const password = event.target.password.value
         const confirmPass = event.target.confirmPassword.value
         console.log(email, password, confirmPass);
-
-
-
         await createUserWithEmailAndPassword(email, password)
         await updateProfile({ displayName: userInfo.name });
-        toast('Updated profile');
+        toast('Account Successfully Created');
         
     }
     
@@ -54,7 +50,6 @@ const Signup = () => {
         <div className="login-container">
         <div className="login-title">SIGNUP</div>
         <form onSubmit={handleEmail} className="login-form">
-            <input type="text" name='name' placeholder="Your Name" />
             <input type="email" name='email' placeholder="Your Email" onChange={forEmail}/>
             {error.email && <p className='error-message'>{error.email}</p>}
             <input type="password" name='password' placeholder="password"  />

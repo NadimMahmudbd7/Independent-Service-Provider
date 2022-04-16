@@ -61,7 +61,7 @@ const Carosel = () => {
                 </div>
             </div>
             <div className="ServiceSection">
-                <h1 className='text-center my-5'>Our Services</h1>
+                <h1 className='text-center my-5'>My Services</h1>
 
                 <div className="allServices pb-5">
                     {
