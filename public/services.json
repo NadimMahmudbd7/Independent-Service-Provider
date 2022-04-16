@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "name": "Matchmaking",
+        "price": "300",
+        "description": "For over 10 years, Agape Match has offered executive matchmaking for exceptional singles. Clients have entrusted us with their most important search, to find their lifetime companion. Leveraging four generations of matchmaking expertise with the latest in relationship psychology means our clients benefit from a unique 360° approach. And because we are a boutique service, our team of experts work closely with each client, providing discreet, personalized attention to help them find The One.",
+        "img": "https://i.ibb.co/dGDkr4v/1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Dating Refresh",
+        "price": "100",
+        "description": "Our Dating Refresh program is designed to help women and men improve their dating experience. Clients learn how to define and enhance their unique style to attract more dates and identify the dating behaviors that may be keeping them from romantic success. Our one-on-one program includes; 360° Assessment sessions to understand dating history and behavior with Founder, Maria Avgitidis, a wardrobe review, personalized shopping experience with a professional stylist and a photo shoot, followed by a digital “makeover” with online dating assistance and personal coaching. And as an added bonus, every Dating Refresh client is included in the Agape Match VIP Membership Directory—the first place we look when matching our exceptional clients.",
+        "img": "https://i.ibb.co/tY8dmnP/2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Group Coaching Intensive",
+        "price": "150",
+        "description": "Our Virtual Group Coaching Intensive program is designed to help women improve their dating experience in one week! The group meets three times and over the collective seven hours, we dive into compatibility, chemistry analysis, and identifying and avoiding the roadblocks that keep us single and/or attracting the wrong person. Through the group, a community is formed and with our guidance, we give a roadmap to meet your relationship goals. This group is for women only. What we’ll cover: Attachment styles and its effect on your dating behavior, Chemistry – understanding your temperament, Compatibility Pillars – how to measure the kind of person you should be with, setting realistic expectations, learning to identify your personal triggers, breaking down your self sabotaging beliefs, and how to create a social roadmap to attract the quality partner you’re looking for.",
+        "img": "https://i.ibb.co/Yh04YVw/3.jpg"
+    }
+    
+]
