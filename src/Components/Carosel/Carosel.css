@@ -1,0 +1,32 @@
+.allServices{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 50px;
+}
+.ServiceSection{
+    background-color: #ebebeb4d;
+}
+.footer-details{
+    margin-top: 50px;
+    background-color: #0a0826;
+    padding: 50px;
+    line-height: 32px;
+}
+.footer-title h2{
+    color:white;
+    text-align: center;
+}
+.footer-title p{
+    color: white;
+    text-align: center;
+}
+.footer-icon{
+    color: white;
+    text-align: center;
+    letter-spacing: 10px;
+}
+.chapai{
+    font-size: 40px;
+    color: rgba(182, 10, 10, 0.836);
+
+}
