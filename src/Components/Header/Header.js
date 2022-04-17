@@ -4,6 +4,7 @@ import "./Header.css"
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import auth from '../../firebase.init';
+import CustomLink from '../CustomeLink/CustomLink';
 
 const Header = () => {
     const [user, loading, error] = useAuthState(auth);
@@ -22,19 +23,19 @@ const Header = () => {
                     <div className="collapse navbar-collapse mx-start" id="navbarNav">
                         <ul className="navbar-nav ms-auto">
                             <li className="nav-item">
-                                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+                                <CustomLink className="nav-link active" aria-current="page" to="/">Home</CustomLink>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to={'/blog'}>Blog</Link>
+                                <CustomLink className="nav-link active" to={'/blog'}>Blog</CustomLink>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to={"/aboutme"}>About Me</Link>
+                                <CustomLink className="nav-link active" to={"/aboutme"}>About Me</CustomLink>
                             </li>
                             <li className="nav-item">
-                                { user ?<Link className="nav-link" onClick={logout} to={"/login"}>Sign Out</Link> :<Link className="nav-link" to={"/login"}>Login</Link>}
+                                { user ?<CustomLink className="nav-link active" onClick={logout} to={"/login"}>Sign Out</CustomLink> :<CustomLink className="nav-link active" to={"/login"}>Login</CustomLink>}
                             </li>
                             <li className="nav-item">
-                                {user?<Link className="nav-link d-none" to={"/signup"}>Sign Up</Link> : <Link className="nav-link d-block" to={"/signup"}>Sign Up</Link>}
+                                {user?<CustomLink className="nav-link active d-none" to={"/signup"}>Sign Up</CustomLink> : <CustomLink className="nav-link d-block active" to={"/signup"}>Sign Up</CustomLink>}
                             </li>
                         </ul>
                     </div>

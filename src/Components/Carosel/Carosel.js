@@ -33,12 +33,13 @@ const Carosel = () => {
                     </div>
                 </div>
             </div>
+
             {/* Welcome section */}
             <div className="welcome d-flex align-items-center justify-content-center flex-column my-5">
                 <h2 className='text-center mt-5'>Welcome to <span>Chapai</span> MatchMaking</h2>
                 <img src={love} alt="" />
             </div>
-            <div className="Customer Status row">
+            <div className="CustomerStatus row">
                 <div className="onePerson col-3 d-flex align-items-center justify-content-center flex-column">
                     <img src={wicon1} alt="" />
                     <h1>1611</h1>
@@ -60,15 +61,20 @@ const Carosel = () => {
                     <small>Women online</small>
                 </div>
             </div>
+            {/* welcome section end */}
+
+            
             <div className="ServiceSection">
                 <h1 className='text-center my-5'>My Services</h1>
 
                 <div className="allServices pb-5">
                     {
-                        services.map(oneService => <Service oneService={oneService}></Service>)
+                        services.map(oneService => <Service oneService={oneService} key={oneService.id}></Service>)
                     }
                 </div>
             </div>
+
+            <div className="SoulMate container">
             <div className="welcome d-flex align-items-center justify-content-center flex-column my-5">
                 <h2 className='text-center mt-5'>Step to Find Your Soul mate</h2>
                 <img src={love} alt="" />
@@ -87,18 +93,19 @@ const Carosel = () => {
                     <h1>Start Dating</h1>
                 </div>
             </div>
+            </div>
 
             {/* FooterSection */}
-            <footer class="footer-details">
-                <div class="footer-title">
+            <footer className="footer-details">
+                <div className="footer-title">
                     <h2><span className='chapai'>Chapai</span> MatchMakings</h2>
                     <p>Copyright &copy; 2020  Chapai products</p>
                     <p>All rights reserved</p>
                 </div>
-                <div class="footer-icon">
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-youtube"></i>
+                <div className="footer-icon">
+                    <i className="fab fa-instagram"></i>
+                    <i className="fab fa-twitter"></i>
+                    <i className="fab fa-youtube"></i>
 
                 </div>
             </footer>

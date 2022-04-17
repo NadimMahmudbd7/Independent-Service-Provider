@@ -1,0 +1,61 @@
+.Register {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 600px;
+    border: 1px solid #95A0A7;
+    border-radius: 8px;
+}
+
+.registerForm {
+    display: flex;
+    justify-content: center;
+}
+
+.inputField {
+    padding: 15px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border: 1px solid #95A0A7;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.signUp {
+    text-align: center;
+    color: #2A414F;
+    margin-top: 40px;
+}
+
+.registerText {
+    margin-left: 45px;
+    margin-bottom: 9px;
+    color: #2A414F;
+}
+
+.submit {
+    background: rgba(61, 64, 248, 0.925);
+    border-radius: 5px;
+    color: #fcfcfc;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.submit:hover{
+    background: rgba(1, 4, 184, 0.8);
+}
+.alreadyAccount{
+    text-align: center;
+    margin: -12px;
+}
+.alreadyAccount a{
+    text-decoration: none;
+    color: #FF9900;
+}
+.error{
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    color: red;
+}
