@@ -9,10 +9,10 @@ import souel1 from "../images/soul-1.png"
 import souel2 from "../images/soul-2.png"
 import souel3 from "../images/soul-3.png"
 import Service from '../Service/Service';
-import "./Carosel.css"
+import "./Home.css"
 
 
-const Carosel = () => {
+const Home = () => {
     const [services, setServices] = useState([])
     useEffect(() => {
         fetch("services.json")
@@ -22,7 +22,7 @@ const Carosel = () => {
     return (
         <div>
             {/* Carosel section */}
-            <div id="carouselExampleCaptions" className="carousel slide " data-bs-ride="carousel">
+            <div id="carouselExampleCaptions" className="carousel slide animate__animated wow animate__zoomIn" data-bs-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
                         <img src={banner} className="d-block w-100" alt="..." />
@@ -36,7 +36,7 @@ const Carosel = () => {
 
             {/* Welcome section */}
             <div className="welcome d-flex align-items-center justify-content-center flex-column my-5">
-                <h2 className='text-center mt-5 animate__animated wow animate__slideInDown'>Welcome to <span>Chapai</span> MatchMaking</h2>
+                <h2 className='text-center mt-5 animate__animated wow animate__slideInDown'>Welcome to <span style={{fontSize:"40px"}}>Chapai</span> MatchMaking</h2>
                 <img src={love} alt="" />
             </div>
             <div className="container">
@@ -115,4 +115,4 @@ const Carosel = () => {
     );
 };
 
-export default Carosel;
+export default Home;
