@@ -68,10 +68,10 @@ const Login = () => {
         if (HookError) {
             switch (HookError?.code) {
                 case "auth/invalid-password":
-                    toast("wrong pass")
+                    toast("Wrong Password")
                     break;
                 case "auth/invalid-email":
-                    toast("email nai")
+                    toast("Invalid Email")
                     break;
                 default:
                     toast("someting went wrong")
@@ -80,7 +80,7 @@ const Login = () => {
     }, [HookError])
 
     return (
-        <div className="login-container">
+        <div className="login-container animate__animated wow animate__zoomIn">
             <div className="login-title">LOGIN</div>
             <form onSubmit={handleEmail} className="login-form">
                 <input type="email" name='email' placeholder="Your Email" onChange={forEmail} />

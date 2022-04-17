@@ -27,7 +27,7 @@ const Carosel = () => {
                     <div className="carousel-item active">
                         <img src={banner} className="d-block w-100" alt="..." />
                         <div className="carousel-caption d-none d-md-block">
-                            <h2>Meet with confidence.</h2>
+                            <h2>Enjoy Your Couple Day</h2>
                             <p>Events are back!</p>
                         </div>
                     </div>
@@ -36,36 +36,38 @@ const Carosel = () => {
 
             {/* Welcome section */}
             <div className="welcome d-flex align-items-center justify-content-center flex-column my-5">
-                <h2 className='text-center mt-5'>Welcome to <span>Chapai</span> MatchMaking</h2>
+                <h2 className='text-center mt-5 animate__animated wow animate__slideInDown'>Welcome to <span>Chapai</span> MatchMaking</h2>
                 <img src={love} alt="" />
             </div>
-            <div className="CustomerStatus row">
-                <div className="onePerson col-3 d-flex align-items-center justify-content-center flex-column">
+            <div className="container">
+            <div className="CustomerStatus row " >
+                <div className="onePerson animate__animated wow animate__slideInLeft col-3 d-flex align-items-center justify-content-center flex-column">
                     <img src={wicon1} alt="" />
                     <h1>1611</h1>
                     <small>Total Members</small>
                 </div>
-                <div className="onePerson col-3 d-flex align-items-center justify-content-center flex-column">
+                <div className="onePerson onePerson animate__animated wow animate__slideInUp col-3 d-flex align-items-center justify-content-center flex-column">
                     <img src={wicon2} alt="" />
                     <h1>500</h1>
                     <small>Members online</small>
                 </div>
-                <div className="onePerson col-3 d-flex align-items-center justify-content-center flex-column">
+                <div className="onePerson onePerson onePerson animate__animated wow animate__slideInUp col-3 d-flex align-items-center justify-content-center flex-column">
                     <img src={wicon3} alt="" />
                     <h1>300</h1>
                     <small>Men online</small>
                 </div>
-                <div className="onePerson col-3 d-flex align-items-center justify-content-center flex-column">
+                <div className="onePerson onePerson onePerson animate__animated wow animate__slideInRight col-3 d-flex align-items-center justify-content-center flex-column">
                     <img src={wicon4} alt="" />
                     <h1>200</h1>
                     <small>Women online</small>
                 </div>
             </div>
+            </div>
             {/* welcome section end */}
 
             
             <div className="ServiceSection">
-                <h1 className='text-center my-5'>My Services</h1>
+                <h1 className='text-center my-5 animate__animated wow animate__slideInDown'>My Services</h1>
 
                 <div className="allServices pb-5">
                     {
@@ -76,19 +78,19 @@ const Carosel = () => {
 
             <div className="SoulMate container">
             <div className="welcome d-flex align-items-center justify-content-center flex-column my-5">
-                <h2 className='text-center mt-5'>Step to Find Your Soul mate</h2>
+                <h2 className='text-center mt-5 animate__animated wow animate__slideInDown'>Step to Find Your Soul mate</h2>
                 <img src={love} alt="" />
             </div>
             <div className="Customer Status row">
-                <div className="onePerson col-4 d-flex align-items-center justify-content-center flex-column">
+                <div className="onePerson col-4 d-flex align-items-center justify-content-center flex-column animate__animated wow animate__slideInLeft">
                     <img src={souel1} alt="" />
                     <h1>Create a profile</h1>
                 </div>
-                <div className="onePerson col-4 d-flex align-items-center justify-content-center flex-column">
+                <div className="animate__animated wow animate__slideInUp onePerson col-4 d-flex align-items-center justify-content-center flex-column">
                     <img src={souel2} alt="" />
                     <h1>Find matches</h1>
                 </div>
-                <div className="onePerson col-4 d-flex align-items-center justify-content-center flex-column">
+                <div className="animate__animated wow animate__slideInRight onePerson col-4 d-flex align-items-center justify-content-center flex-column">
                     <img src={souel3} alt="" />
                     <h1>Start Dating</h1>
                 </div>

@@ -16,7 +16,7 @@ const Header = () => {
         <>
             <nav className="navbar-expand-lg navbar navbar-dark bg-primary sticky-lg-top sticky-sm-top">
                 <div className="container-fluid container">
-                    <a className="navbar-brand" href="#"> <span>Chapai</span> MatchMaking</a>
+                    <a className="navbar-brand animate__animated wow animate__zoomIn" href="#"> <span>Chapai</span> MatchMaking</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>

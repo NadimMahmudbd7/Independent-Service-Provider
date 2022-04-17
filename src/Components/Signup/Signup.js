@@ -5,9 +5,8 @@ import { useUpdateProfile } from 'react-firebase-hooks/auth';
 import { toast, ToastContainer } from 'react-toastify';
 import google from "../images/google.png"
 import 'react-toastify/dist/ReactToastify.css';
-
 import auth from '../../firebase.init';
-import Loading from '../Loading/Loading';
+
 
 
 const Signup = () => {
@@ -62,9 +61,6 @@ const Signup = () => {
         }
     }
 
-    // if (loading) {
-    //     return <Loading></Loading>
-    // }
     if(user || googleUser){
         navigate("/")
     }
@@ -91,7 +87,7 @@ const Signup = () => {
 
 
     return (
-        <div className="login-container">
+        <div className="login-container animate__animated wow animate__zoomIn">
             <div className="login-title">SIGNUP</div>
             <form onSubmit={handleEmail} className="login-form">
                 <input type="email" name='email' placeholder="Your Email" onChange={forEmail} />

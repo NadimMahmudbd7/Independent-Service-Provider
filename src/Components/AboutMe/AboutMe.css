@@ -1,0 +1,33 @@
+.backGroundSection::before{
+    content: "";
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    background-image: linear-gradient(45deg, rgba(55, 67, 241, 0.685),rgb(106, 208, 248));
+    z-index: -1;
+    
+}
+.aboutme{
+    width: 100%;
+    height: 500px;
+    background-color: rgba(235, 231, 231, 0.459);
+    position: relative;
+    top: 100px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+.imageForMe{
+    overflow: hidden;
+    width: 350px;
+}
+.aboutImage{
+    display: flex;
+    align-items: center;
+    
+}
+.detailsMe{
+    display: flex;
+    align-items: center;
+}
