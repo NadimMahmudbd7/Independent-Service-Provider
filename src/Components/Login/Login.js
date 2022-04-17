@@ -55,8 +55,15 @@ const Login = () => {
         signInWithEmailAndPassword(Email, password)
     }
     const forResetPassword = async () => {
-        await sendPasswordResetEmail(userInfo.email);
-        toast("Password Reset successfull")
+        if (userInfo.email) {
+            await sendPasswordResetEmail(userInfo.email);
+            toast("Password Reset successfully")
+        }
+
+        else {
+            return toast("Must be need Email")
+        }
+
     }
     if (loading) {
         <p>Loading</p>
@@ -64,22 +71,25 @@ const Login = () => {
     if (user || googleUser) {
         navigate(from)
     }
-
+    console.log(HookError);
     useEffect(() => {
         if (HookError) {
             switch (HookError?.code) {
-                case "auth/invalid-password":
+                case "auth/wrong-password":
                     toast("Wrong Password")
                     break;
                 case "auth/invalid-email":
                     toast("Invalid Email")
                     break;
+                case "auth/user-not-found":
+                    toast("User Not Found")
+                    break
                 default:
                     toast("someting went wrong")
             }
         }
     }, [HookError])
-    
+
     return (
         <div className="login-container animate__animated wow animate__zoomIn">
             <div className="login-title">LOGIN</div>

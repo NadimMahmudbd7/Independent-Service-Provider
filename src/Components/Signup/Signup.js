@@ -100,7 +100,7 @@ const Signup = () => {
                     </svg></p>
                 </div>
                 {error.password && <p className='error-message'>{error.password}</p>}
-                <input type="password" name='confirmPassword' placeholder="confirmPassword" onChange={forConfirmPassword} />
+                <input type={showpass ? "text" : "password"} name='confirmPassword' placeholder="confirmPassword" onChange={forConfirmPassword} />
                 {error.confirmpass && <p className='error-message'>{error.confirmpass}</p>}
                 <button>SignUp</button>
                 <p>Already Have Account? <Link to="/login">Login</Link> </p>
